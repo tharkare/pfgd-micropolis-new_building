@@ -1009,13 +1009,21 @@
 957   misc_animation@0,2080
 958   misc_animation@0,2096
 959   misc_animation@0,2112
-# BEGIN NEW BUILDING #
-960   new_building@0,0            (conducts)
-961   new_building@16,0           (conducts)
-962   new_building@32,0           (conducts)
-963   new_building@0,16           (conducts)
-964   new_building@16,16    (zone)(conducts)(building=3x3)(behavior=NEW_BUILDING)(description=#28)
-965   new_building@32,16          (conducts)
-966   new_building@0,32           (conducts)
-967   new_building@16,32          (conducts)
-968   new_building@32,32          (conducts)
+
+# BEGIN SOLAR PLANT #
+960   solar_plant@0,0            (conducts)
+961   solar_plant@16,0           (conducts)
+962   solar_plant@32,0           (conducts)
+963   solar_plant@48,0           (conducts)
+964   solar_plant@0,16           (conducts)
+965   solar_plant@16,16    (zone)(conducts)(building=4x4)(behavior=SOLAR_PLANT)(description=#28)
+966   solar_plant@32,16          (conducts)
+967   solar_plant@48,16          (conducts)
+968   solar_plant@0,32           (conducts)
+969   solar_plant@16,32          (conducts) 
+970   solar_plant@32,32          (conducts)
+971   solar_plant@48,32          (conducts)
+972   solar_plant@0,48           (conducts)
+973   solar_plant@16,48          (conducts)
+974   solar_plant@32,48          (conducts)
+975   solar_plant@48,48          (conducts)

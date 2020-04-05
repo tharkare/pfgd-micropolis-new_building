@@ -42,7 +42,7 @@ class MapScanner extends TileBehavior
 		STADIUM_FULL,
 		AIRPORT,
 		SEAPORT,
-		NEW_BUILDING; //Placeholder enum for new building. Change to building name if making a new building
+		SOLAR_PLANT; //Placeholder for new building. Change to building name if making a new building
 	}
 
 	@Override
@@ -85,8 +85,8 @@ class MapScanner extends TileBehavior
 		case SEAPORT:
 			doSeaport();
 			return;
-		case NEW_BUILDING:
-			doNewBuilding(); //Call the NEW_BUILDING placeholder function
+		case SOLAR_PLANT:
+			doNewBuilding(); //Call the SOLAR_PLANT placeholder function
 			return;
 		default:
 			assert false;
@@ -215,7 +215,7 @@ class MapScanner extends TileBehavior
 		//Very basic building functionality. Checks for power and does "repair"
 		boolean powerOn = checkZonePower();
 		if ((city.cityTime % 8) == 0) {
-			repairZone(NEW_BUILDING, 3);
+			repairZone(SOLAR_PLANT, 3);
 		}
 	}
 
