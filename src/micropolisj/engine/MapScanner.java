@@ -42,7 +42,7 @@ class MapScanner extends TileBehavior
 		STADIUM_FULL,
 		AIRPORT,
 		SEAPORT,
-		SOLAR_PLANT; //Placeholder for new building. Change to building name if making a new building
+		SOLAR_PLANT;
 	}
 
 	@Override
@@ -115,6 +115,7 @@ class MapScanner extends TileBehavior
 		boolean newPower = (
 			tile == NUCLEAR ||
 			tile == POWERPLANT ||
+			tile == SOLAR_PLANT ||
 			city.hasPower(xpos,ypos)
 			);
 
@@ -214,9 +215,12 @@ class MapScanner extends TileBehavior
 	{
 		//Very basic building functionality. Checks for power and does "repair"
 		boolean powerOn = checkZonePower();
+		city.solarCount++;
 		if ((city.cityTime % 8) == 0) {
-			repairZone(SOLAR_PLANT, 3);
+			repairZone(SOLAR_PLANT, 4);
 		}
+		
+		city.powerPlants.add(new CityLocation(xpos, ypos));
 	}
 
 	void doFireStation()
