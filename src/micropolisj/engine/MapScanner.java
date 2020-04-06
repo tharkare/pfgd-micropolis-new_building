@@ -86,7 +86,7 @@ class MapScanner extends TileBehavior
 			doSeaport();
 			return;
 		case SOLAR_PLANT:
-			doNewBuilding(); //Call the SOLAR_PLANT placeholder function
+			doSolarPlant(); //Call the SOLAR_PLANT function
 			return;
 		default:
 			assert false;
@@ -209,8 +209,7 @@ class MapScanner extends TileBehavior
 		city.powerPlants.add(new CityLocation(xpos, ypos));
 	}
 	
-	//Look at doNuclearPower() & doCoalPower() functions to guidance on what this function should do.
-	void doNewBuilding()
+	void doSolarPlant()
 	{
 		//Very basic building functionality. Checks for power and does "repair"
 		boolean powerOn = checkZonePower();
@@ -221,6 +220,7 @@ class MapScanner extends TileBehavior
 		
 		city.powerPlants.add(new CityLocation(xpos, ypos));
 		//adds a new plant to contribute and calculate overall city power
+		//based this function off of the logic in the coal plant function
 	}
 
 	void doFireStation()

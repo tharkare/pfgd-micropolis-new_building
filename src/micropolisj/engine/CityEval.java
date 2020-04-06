@@ -102,6 +102,7 @@ public class CityEval
 		z += engine.airportCount * 10000;
 		z += engine.coalCount * 3000;
 		z += engine.nuclearCount * 6000;
+		z += engine.solarCount * 8000;	//set this based on high price of solar plant
 		cityAssValue = z * 1000;
 	}
 
