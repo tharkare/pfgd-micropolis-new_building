@@ -42,7 +42,7 @@ class MapScanner extends TileBehavior
 		STADIUM_FULL,
 		AIRPORT,
 		SEAPORT,
-		SOLAR_PLANT;
+		SOLAR_PLANT;	//new solar plant enum
 	}
 
 	@Override
@@ -115,7 +115,7 @@ class MapScanner extends TileBehavior
 		boolean newPower = (
 			tile == NUCLEAR ||
 			tile == POWERPLANT ||
-			tile == SOLAR_PLANT ||
+			tile == SOLAR_PLANT ||	//now any SOLAR_PLANT can provide power to other buildings
 			city.hasPower(xpos,ypos)
 			);
 
@@ -209,8 +209,7 @@ class MapScanner extends TileBehavior
 		city.powerPlants.add(new CityLocation(xpos, ypos));
 	}
 	
-	//Placeholder for a new building
-	//Look to the other do<building name>() functions to guidance on what this function should do.
+	//Look at doNuclearPower() & doCoalPower() functions to guidance on what this function should do.
 	void doNewBuilding()
 	{
 		//Very basic building functionality. Checks for power and does "repair"
@@ -221,6 +220,7 @@ class MapScanner extends TileBehavior
 		}
 		
 		city.powerPlants.add(new CityLocation(xpos, ypos));
+		//adds a new plant to contribute and calculate overall city power
 	}
 
 	void doFireStation()

@@ -1032,8 +1032,8 @@ public class Micropolis
 		//
 		// Note: brownouts are based on total number of power plants, not the number
 		// of powerplants connected to your city.
-		//
-
+		
+		//Consider changing solarCount * whatever number to better fit the city in maxPower calculation
 		int maxPower = coalCount * 700 + nuclearCount * 2000 + solarCount * 1000;
 		int numPower = 0;
 
@@ -2100,7 +2100,7 @@ public class Micropolis
 		coalCount = 0;
 		nuclearCount = 0;
 		solarCount = 0; 
-
+		//created a new variable to help calculate if city has enough power overall
 		powerPlants.clear();
 		for (int y = 0; y < map.length; y++) {
 			for (int x = 0; x < map[y].length; x++) {
@@ -2526,7 +2526,7 @@ public class Micropolis
 		//MORE (scenario stuff)
 
 		checkGrowth();
-
+		//now any new sustainable plants will be taken into consideration for the whole city
 		int totalZoneCount = resZoneCount + comZoneCount + indZoneCount;
 		int powerCount = nuclearCount + coalCount + solarCount;
 
