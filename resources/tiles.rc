@@ -1016,7 +1016,7 @@
 962   solar_plant@32,0           (conducts)
 963   solar_plant@48,0           (conducts)
 964   solar_plant@0,16           (conducts)
-965   solar_plant@16,16    (zone)(conducts)(building=4x4)(behavior=SOLAR_PLANT)(description=#28)(pollution=50)
+965   solar_plant@16,16    (zone)(conducts)(building=4x4)(behavior=SOLAR_PLANT)(description=#28)(pollution=15)
 966   solar_plant@32,16          (conducts)
 967   solar_plant@48,16          (conducts)
 968   solar_plant@0,32           (conducts)
